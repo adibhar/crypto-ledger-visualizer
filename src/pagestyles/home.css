@@ -1,0 +1,24 @@
+.page-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    padding: 1rem;
+}
+
+.page-title-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 2rem 3rem;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    background-color: #1b2731;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.page-title-box h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
