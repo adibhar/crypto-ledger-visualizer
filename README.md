@@ -1,2 +1,2 @@
 Crypto ledger visualizer
-Frontend tool for the custom RESTful crypto wallet API 
+Frontend tool for the RESTful crypto wallet API 
