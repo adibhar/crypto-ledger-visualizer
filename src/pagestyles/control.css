@@ -1,34 +1,61 @@
 .control-container {
     padding: 2rem;
+
     max-width: 500px;
     margin: auto;
+    margin-top: 5rem;
     text-align: center;
+    background-color: var(--surface-dark);
+    border-radius: var(--radius);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .control-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
+    margin-top: 1rem;
 }
 
 .control-input {
-    padding: 0.75rem;
+    background-color: var(--surface-light);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
     font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.control-input::placeholder {
+    color: var(--text-muted);
+}
+
+.control-input:focus {
+    outline: none;
+    border-color: var(--highlight-blue);
+    box-shadow: 0 0 8px var(--highlight-blue);
 }
 
 .control-button {
-    padding: 0.75rem;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    background-color: #2c7be5;
+    background-color: var(--highlight-blue);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.control-button:hover {
+    background-color: var(--highlight-blue-hover);
+    transform: scale(1.03);
 }
 
 .control-status {
     margin-top: 1rem;
     font-weight: bold;
+    color: var(--text-light);
 }

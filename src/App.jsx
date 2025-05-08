@@ -7,7 +7,7 @@ import './index.css'
 
 function App() {
   return (
-    <div>
+    <div className="app-wrapper">
       <nav className="navbar">
         <Link to="/">Visualizer</Link>
         <Link to="/home">Wallets</Link>
@@ -22,7 +22,8 @@ function App() {
         <Route path="/" element={<Visualizer />} />
       </Routes>
     </div>
-  )
+  );
 }
+
 
 export default App

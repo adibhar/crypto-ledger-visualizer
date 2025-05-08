@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { sendTransaction, mineBlock } from '../api/blockchain';
 import '../pagestyles/control.css';
+import { sendTransaction } from '../api/blockchain';
 
 export function Info() {
   const [sender, setSender] = useState('');
@@ -21,14 +21,12 @@ export function Info() {
       await sendTransaction(sender, receiver, parseFloat(amount), signature);
       setStatus("Transaction sent!");
     } catch (err) {
-      setStatus(`${err.message}`);
+      setStatus(` ${err.message}`);
       console.error(err);
     } finally {
       setLoading(false);
     }
   };
-
-
 
   return (
     <div className="control-container">
@@ -72,10 +70,9 @@ export function Info() {
         </button>
       </div>
 
-
-
       {status && <p className="control-status">{status}</p>}
     </div>
   );
 }
+
 export default Info;
